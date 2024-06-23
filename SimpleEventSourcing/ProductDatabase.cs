@@ -4,8 +4,8 @@ namespace SimpleEventSourcing;
 
 internal class ProductDatabase
 {
-    private readonly Dictionary<Guid, List<ProductEvent>> _productEventStreams = []; // Event Streams
-    private readonly Dictionary<Guid, Product> _products = [];                       // Views
+    private readonly Dictionary<Guid, List<ProductEvent>> _productEventStreams = []; // event streams
+    private readonly Dictionary<Guid, Product> _products = [];                       // views
 
     internal void Append(ProductEvent @event)
     {
@@ -16,7 +16,7 @@ internal class ProductDatabase
 
         @event.CreatedAtUtc = DateTime.UtcNow;
 
-        eventStream.Add(@event); // Append to Stream
+        eventStream.Add(@event); // append to stream
 
         Update_View(@event);
     }
@@ -54,3 +54,5 @@ internal class ProductDatabase
     }
 
 }
+
+
