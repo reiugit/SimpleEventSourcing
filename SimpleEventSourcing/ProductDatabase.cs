@@ -5,7 +5,7 @@ namespace SimpleEventSourcing;
 internal class ProductDatabase
 {
     private readonly Dictionary<Guid, List<ProductEvent>> _productEventStreams = []; // Event Streams
-    private readonly Dictionary<Guid, Product> _products = [];                 // Views
+    private readonly Dictionary<Guid, Product> _products = [];                       // Views
 
     internal void Append(ProductEvent @event)
     {

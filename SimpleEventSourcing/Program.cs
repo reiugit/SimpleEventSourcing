@@ -10,13 +10,13 @@ var productUpdated = new ProductUpdated { ProductId = productId, Name = "Updated
 var productTagged1 = new ProductTagged { ProductId = productId, TagName = "Test-Tag 1" };
 var productTagged2 = new ProductTagged { ProductId = productId, TagName = "Test-Tag 2" };
 
-productDatabase.Append(productCreated); // Create Event Stream
+productDatabase.Append(productCreated); // create event stream
 productDatabase.Append(productTagged1);
 productDatabase.Append(productUpdated);
 productDatabase.Append(productTagged2);
 
-var productFromView = productDatabase.GetProductFromView(productId)!;     // Materialize Product from View
-var productFromStream = productDatabase.GetProductFromStream(productId)!; // Materialize Product from Event Stream
+var productFromView = productDatabase.GetProductFromView(productId)!;     // materialize product from view
+var productFromStream = productDatabase.GetProductFromStream(productId)!; // materialize product from event stream
 
 Console.WriteLine();
 Console.WriteLine($"Product '{productFromView.Name}' has {productFromView.Tags.Count} Tags.  (from view)");
