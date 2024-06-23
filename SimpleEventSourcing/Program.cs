@@ -19,7 +19,7 @@ var productFromView = productDatabase.GetProductFromView(productId)!;     // Mat
 var productFromStream = productDatabase.GetProductFromStream(productId)!; // Materialize Product from Event Stream
 
 Console.WriteLine();
-Console.WriteLine($"Product '{productFromView.Name}' has {productFromView.Tags.Count} Tags.");
-Console.WriteLine($"Product '{productFromStream.Name}' has {productFromStream.Tags.Count} Tags.");
+Console.WriteLine($"Product '{productFromView.Name}' has {productFromView.Tags.Count} Tags.  (from view)");
+Console.WriteLine($"Product '{productFromStream.Name}' has {productFromStream.Tags.Count} Tags.  (from stream)");
 
 
