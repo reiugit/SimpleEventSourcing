@@ -23,3 +23,5 @@ Console.WriteLine($"Product '{productFromView.Name}' has {productFromView.Tags.C
 Console.WriteLine($"Product '{productFromStream.Name}' has {productFromStream.Tags.Count} Tags.  (from stream)");
 
 
+Console.WriteLine("\n\nPress any key to exit.");
+Console.ReadKey(true);
